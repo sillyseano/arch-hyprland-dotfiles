@@ -1,0 +1,75 @@
+@import url("waybar-colors.css");
+@define-color fg @foreground;
+@define-color bg @background;
+/* === Global Styles === */
+* {
+    border: none;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top:1px;
+    margin-bottom:1px;
+}
+
+
+
+window#waybar {
+    background: alpha(@bg, 1);
+    color: @fg;
+    border-radius: 0px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+  color: @fg;
+}
+
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-pacman,
+#custom-launcher,
+#custom-pacman {
+  min-width: 12px;
+  margin: 0 8px;
+}
+
+#custom-expand-icon {
+  margin-right: 0px;
+}
+
+#custom-expand:hover {
+    color: alpha(@fg, 0.2);
+    text-shadow: 0 0 2px alpha(@fg, 0.5);
+}
+
+#tooltip {
+  padding: 2px;
+}
+
+#custom-endpoint {
+    color: @fg;
+    margin-left: 7.5px;
+    text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+}
+
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio {
+  font-size: 16px;
+}

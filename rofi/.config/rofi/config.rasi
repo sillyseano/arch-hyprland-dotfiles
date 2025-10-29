@@ -1,0 +1,78 @@
+configuration {
+    modi:                        "drun,filebrowser,window,run";
+    show-icons:                  true;
+    display-drun:                "";
+    display-run:                 "";
+    display-filebrowser:         "";
+    display-window:              "";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    kb-row-up:"Up,Alt+k";
+    kb-row-down:"Down,Alt+j";
+}
+
+@theme "~/.config/themes/currentTheme/rofi-style.rasi"
+
+window {
+    width:                       35em;
+    height:                      25em;
+    border:                      2px;
+    border-color:                @main-br;
+    padding:                     1.2em;
+    background-color:            @main-bg;
+}
+
+mainbox {
+    orientation:                 vertical;
+    spacing:                     1em;
+    background-color: 		 transparent;
+}
+
+inputbar {
+    children:                    [ "entry" ];
+    background-color:            transparent;
+    padding:                     0.5em 0.8em;
+    border:                      1px;
+    border-radius:               0em;
+    border-color:                @main-br;
+}
+
+entry {
+    text-color:                  @main-fg;
+    placeholder:                 "Search…";
+    background-color:		 transparent;
+}
+
+listview {
+    columns:                     1;
+    lines:                       10;
+    spacing:                     0.4em;
+    scrollbar:                   false;
+    cycle:                       true;
+    dynamic:                     true;
+    background-color:            transparent;
+}
+
+element {
+    padding:                     0.5em 0.8em;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+    border-radius:               0em;
+}
+
+element selected.normal {
+    background-color:            @select-bg;
+    text-color:                  @select-fg;
+}
+
+element-icon {
+    size:                        1.8em;
+    text-color:                  inherit;
+    background-color:            transparent;
+}
+
+element-text {
+    text-color:                  inherit;
+    background-color:            transparent;
+}
+
