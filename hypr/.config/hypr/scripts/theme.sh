@@ -5,7 +5,7 @@
 # ----------------------------
 
 # Path to Stow repo
-STOW_THEMES_DIR="$HOME/stow_dotfiles/themes/.config/themes"
+STOW_THEMES_DIR="$HOME/dotfiles/themes/.config/themes"
 
 # Path to currentTheme symlink in stow repo
 CURRENT_THEME_DIR="$STOW_THEMES_DIR/currentTheme"

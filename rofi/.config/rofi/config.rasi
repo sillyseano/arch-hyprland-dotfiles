@@ -11,7 +11,7 @@ configuration {
     kb-row-down:"Down,Alt+j";
 }
 
-@theme "~/.config/themes/currentTheme/rofi-style.rasi"
+@theme "~/dotfiles/themes/.config/themes/currentTheme/rofi-style.rasi"
 
 window {
     width:                       35em;
