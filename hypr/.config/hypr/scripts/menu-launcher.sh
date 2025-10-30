@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# If rofi is already running, kill it (acts as a toggle)
 if pgrep -x rofi >/dev/null; then
     pkill -x rofi
     exit 0

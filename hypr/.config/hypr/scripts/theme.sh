@@ -4,6 +4,11 @@
 # Stow-based theme switcher
 # ----------------------------
 
+if pgrep -x rofi >/dev/null; then
+    pkill -x rofi
+    exit 0
+fi
+
 # Path to Stow repo
 STOW_THEMES_DIR="$HOME/dotfiles/themes/.config/themes"
 
