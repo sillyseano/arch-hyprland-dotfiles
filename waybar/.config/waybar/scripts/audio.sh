@@ -1,5 +1,4 @@
 #!/bin/bash
-
 TERMINAL_TITLE="WireMixTerm"
 CMD="wiremix"
 
