@@ -12,6 +12,7 @@ PACMAN_PKGS=(
 	grim
 	hyprpolkitagent
 	impala
+	inetutils
 	jq
 	kitty
 	lazygit
@@ -26,13 +27,11 @@ PACMAN_PKGS=(
 	noto-fonts-emoji
 	noto-fonts-extra
 	openssh
-	proton-vpn-gtk-app
 	rofi
 	satty
 	sddm
 	slurp
 	snapper
-	steam
 	stow
 	swww
 	ttf-nerd-fonts-symbols
@@ -81,3 +80,20 @@ done
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
 systemctl --user enable --now hyprpolkitagent.service
+
+#FOR DOCKER DO THE FOLLOWING MANUALLY
+# This is what causes the DOCKER to hang for 5 minutes or black screen on boot
+# sudo systemctl edit systemd-networkd-wait-online.service
+# [SERVICE]
+# ExecStart=
+# ExecStart=/usr/lib/systemd/systemd-networkd-wait-online --any --timeout=30
+# sudo systemctl restart systemd-networkd-wait-online.service
+
+
+# FOR QEMU AND KVM
+# sudo pacman -S qemu-full qemu-img libvirt virt-install virt-manager virt-viewer edk2-ovmf swtpm guestfs-tools libosinfo dnsmasq
+# sudo systemctl enable libvirtd.service
+# sudo systemctl start libvirtd.service
+# sudo virsh net-list --all
+# sudo virsh net-start default
+# sudo virsh net-autostart default
