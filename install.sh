@@ -10,7 +10,6 @@ PACMAN_PKGS=(
 	fzf
 	git
 	grim
-	hyprland
 	hyprpolkitagent
 	impala
 	jq
@@ -37,7 +36,6 @@ PACMAN_PKGS=(
 	stow
 	swww
 	ttf-nerd-fonts-symbols
-	uwsm
 	vim
 	waybar
 	wget
@@ -82,3 +80,4 @@ done
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
+systemctl --user enable --now hyprpolkitagent.service
