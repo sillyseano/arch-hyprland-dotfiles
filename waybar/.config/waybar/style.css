@@ -40,6 +40,7 @@ window#waybar {
 #pulseaudio,
 #custom-pacman,
 #custom-launcher,
+#mpris,
 #custom-pacman {
   min-width: 12px;
   margin: 0 8px;
@@ -70,4 +71,8 @@ window#waybar {
 #bluetooth,
 #pulseaudio {
   font-size: 16px;
+}
+
+#custom-pacman {
+  margin-bottom: 1px;
 }

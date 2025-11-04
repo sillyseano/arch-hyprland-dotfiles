@@ -6,7 +6,7 @@ if pgrep -x rofi >/dev/null; then
 fi
 
 options="Install Package\nInstall AUR Package\nUninstall Package"
-choice=$(echo -e "$options" | rofi -dmenu -p "Package Manager")
+choice=$(echo -e "$options" | rofi -dmenu -p "Package Manager" -theme-str 'window {width: 10%;}')
 
 case "$choice" in
     "Install Package")

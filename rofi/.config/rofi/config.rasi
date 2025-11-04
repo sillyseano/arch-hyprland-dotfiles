@@ -20,6 +20,7 @@ window {
     border-color:                @main-br;
     padding:                     1.2em;
     background-color:            @main-bg;
+    border-radius: 0.5em;
 }
 
 mainbox {
@@ -33,7 +34,7 @@ inputbar {
     background-color:            transparent;
     padding:                     0.5em 0.8em;
     border:                      1px;
-    border-radius:               0em;
+    border-radius:               0.5em;
     border-color:                @main-br;
 }
 
@@ -57,7 +58,7 @@ element {
     padding:                     0.5em 0.8em;
     background-color:            transparent;
     text-color:                  @main-fg;
-    border-radius:               0em;
+    border-radius:               0.5em;
 }
 
 element selected.normal {

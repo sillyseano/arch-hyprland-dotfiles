@@ -10,7 +10,7 @@ mapfile -t themes < <(
   find "$STOW_THEMES_DIR" -mindepth 1 -maxdepth 1 -type d ! -name "currentTheme" -exec basename {} \; | sort
 )
 
-selection=$(printf '%s\n' "${themes[@]}" | rofi -dmenu -p "Select Theme" -i -no-custom)
+selection=$(printf '%s\n' "${themes[@]}" | rofi -dmenu -p "Select Theme" -i -no-custom -theme-str 'window {width: 10%;}')
 if ! printf '%s\n' "${themes[@]}" | grep -qxF "$selection"; then
   exit 0
 fi
