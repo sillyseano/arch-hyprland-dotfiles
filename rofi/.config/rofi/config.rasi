@@ -7,8 +7,21 @@ configuration {
     display-window:              "";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
-    kb-row-up:"Up,Alt+k";
-    kb-row-down:"Down,Alt+j";
+
+    kb-remove-char-back:"";
+    kb-remove-char-back:"BackSpace";
+    kb-row-left:"";
+    kb-row-left:"Control+h";
+    kb-row-up:"";
+    kb-accept-entry:"";
+    kb-accept-entry:"Return";
+    kb-row-up:"Up,Control+j";
+    kb-row-down:"";
+    kb-remove-to-eol:"";
+    kb-row-down:"Down,Control+k";
+    kb-row-right:"";
+    kb-mode-complete:"";
+    kb-row-right:"Control+l";
 }
 
 @theme "~/dotfiles/themes/.config/themes/currentTheme/rofi-style.rasi"

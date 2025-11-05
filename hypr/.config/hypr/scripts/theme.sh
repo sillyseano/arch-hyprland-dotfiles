@@ -22,8 +22,19 @@ ln -sfn "$STOW_THEMES_DIR/$selection" "$CURRENT_THEME_DIR"
 hyprctl reload
 systemctl --user reload --now waybar
 
-waypaper --random
+# Define the path to your wallpapers directory
+wallpaper_dir="$HOME/dotfiles/themes/.config/themes/currentTheme/wallpapers"
 
+# Pick a random wallpaper from the folder
+random_wallpaper=$(find "$wallpaper_dir" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | shuf -n 1)
+
+# Check if a random wallpaper was found
+if [[ -n "$random_wallpaper" ]]; then
+    # Set the wallpaper using swww
+    swww img "$random_wallpaper" --transition-type any --transition-duration 2 --transition-fps 60
+else
+    echo "No wallpaper files found in $wallpaper_dir"
+fi
 kitten themes --reload-in=all kittytheme
 
 

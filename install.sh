@@ -81,6 +81,9 @@ sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
 systemctl --user enable --now hyprpolkitagent.service
 
+cp -r ~/dotfiles/.local/share/icons ~/.local/share/icons
+hyprctl setcursor Bibata-Modern-Ice 24
+
 #FOR DOCKER DO THE FOLLOWING MANUALLY
 # This is what causes the DOCKER to hang for 5 minutes or black screen on boot
 # sudo systemctl edit systemd-networkd-wait-online.service
@@ -88,6 +91,8 @@ systemctl --user enable --now hyprpolkitagent.service
 # ExecStart=
 # ExecStart=/usr/lib/systemd/systemd-networkd-wait-online --any --timeout=30
 # sudo systemctl restart systemd-networkd-wait-online.service
+# DONT ENABLE DOCKER AND DOCKER SOCKET AUTOMATICALLY - IT CAUSES LAG ON STARTUP. BETTER TO HAVE IT STARTUP WHEN DOCKER COMMAND IS USED
+
 
 
 # FOR QEMU AND KVM
