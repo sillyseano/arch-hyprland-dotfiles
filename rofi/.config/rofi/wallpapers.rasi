@@ -5,7 +5,7 @@ configuration {
 }
 
 window {
-  width: 50%;
+  width: 40%;
   height: inherit;
 }
 
@@ -30,7 +30,7 @@ listview {
   lines: 2;
   flow: horizontal;
   fixed-width: true;
-  fixed-height: true;
+  fixed-height: false;
   cycle: true;
 }
 
@@ -44,7 +44,7 @@ element {
 }
 
 element selected.normal {
-  background-color: transparent;
+  background-color: @select-bg;
 }
 
 element-icon {
