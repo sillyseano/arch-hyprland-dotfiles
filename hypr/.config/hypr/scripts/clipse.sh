@@ -1,3 +1,5 @@
+#!/bin/bash
+
 clipse_window=$(hyprctl clients -j | jq -r '.[] | select(.class == "clipse") | .address')
 
 if [[ -n "$clipse_window" ]]; then

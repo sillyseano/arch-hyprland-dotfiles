@@ -15,10 +15,10 @@ configuration {
     kb-row-up:"";
     kb-accept-entry:"";
     kb-accept-entry:"Return";
-    kb-row-up:"Up,Control+j";
+    kb-row-up:"Up,Control+k";
     kb-row-down:"";
     kb-remove-to-eol:"";
-    kb-row-down:"Down,Control+k";
+    kb-row-down:"Down,Control+j";
     kb-row-right:"";
     kb-mode-complete:"";
     kb-row-right:"Control+l";
@@ -27,11 +27,11 @@ configuration {
 @theme "~/dotfiles/themes/.config/themes/currentTheme/rofi-style.rasi"
 
 window {
-    width:                       35em;
-    height:                      25em;
+    width:                       25%;
+    height:                      40%;
     border:                      2px;
     border-color:                @main-br;
-    padding:                     1.2em;
+    padding:                     1%;
     background-color:            @main-bg;
     border-radius: 0.5em;
 }
